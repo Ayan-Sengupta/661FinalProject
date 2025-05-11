@@ -6,6 +6,7 @@ def data_clean():
     df = read.read('/home/ayan/work/MachineLearning/FinalProject/data/education_career_success.csv')
     # our target variable is 'no .of job offers recieved'
     # check if there is missing variables in that column
+    print("Missing values in 'Job_Offers' column:")
     print(df['Job_Offers'].isnull().sum())
 
     # convert gender to dummt variables, then convert to binary for the resulting columns
@@ -32,6 +33,7 @@ def data_clean():
     df.to_csv('/home/ayan/work/MachineLearning/FinalProject/data/clean/education_career_success_clean.csv', index=False)
 
 
+data_clean()
    
 
 
